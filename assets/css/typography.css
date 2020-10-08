@@ -1,0 +1,99 @@
+body {
+    font-family: 'Noto Sans KR','맑은 고딕','Arial','Gulim';
+  }
+/* Font Size */
+
+.fs-tiny {
+  font-size: 12px;
+  line-height: 1.3333333333;
+}
+
+.fs-small {
+  font-size: 14px;
+  line-height: 1.4285714286;
+}
+
+.fs-base {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.fs-medium {
+  font-size: 18px;
+  line-height: 1.5555555556;
+}
+
+.fs-large {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.fs-h2 {
+  font-size: 28px;
+  line-height: 1.4285714286;
+}
+
+.fs-h1 {
+  font-size: 34px;
+  line-height: 1.4117647059;
+}
+
+/* Font Weight */
+
+.fw-light,
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-regular,
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-medium,
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-bold,
+.fw-700 {
+  font-weight: 700;
+}
+
+/* Color */
+
+.text-dark {
+  color: #444444;
+}
+
+.text-yellow {
+  color: #ffee00;;
+}
+
+.text-green {
+  color: #B8E986
+}
+
+.text-blue {
+  color: #1C79BC;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-grey {
+  color:#a0a0ac;
+}
+
+.text-lightgrey {
+  color:#a0a0ac;
+}
+
+.text-orange {
+  color: #F5A623;
+}
+
+.text-red{
+  color:#e73431;
+}
