@@ -98,37 +98,346 @@ body{
     
 }
 /* container */
+
 .container{
     width: 100%;
     height: auto;
-}
-.container .content .head{
-    width: 100%;
-    height: 119px;
+    position: relative;
 }
 
 .container .content .head .rolling-banner{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 84px;
-    background-color: #313841;
-}
 
+    background-color: #313841;
+    position: relative;
+    
+    width: 100%;
+    
+}
+.container .content .head .rolling-banner ul{
+    height: 42px;
+    overflow: hidden;
+ 
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .container .content .head .rolling-banner ul li{
     font-size: 14px;
     font-weight: 500;
-    text-align: center;
+    height: 42px;
+    position: relative;
+  
+    
+
+}
+
+.container .content .head #widget.rolling-banner.rolling ul li{
+    animation-name: banner;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
+    animation-direction: normal;
+    animation-delay: 500ms;
     
 }
+
+@keyframes banner{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 42px;
+    }
+}
+
+
 .container .content .head .rolling-banner ul li a{
     width: 377px;
     color: #fff;
     height: 42px;
     line-height: 42px;
     display: block;
+    position: relative;
 }
 .container .content .head .rolling-banner ul li a span{
     color: #B8E986
+}
+.container .content .head .rolling-banner .btn-arrow.btn-down{
+    width: 33px;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background-position: 50% 50%;
+    z-index: 50;
+    display: block;
+    background-image: url('https://www.tpirates.com/img/bul_arrow_down_white.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.container .content .head .rolling-banner .btn-arrow.btn-up{
+    background-image: url('https://www.tpirates.com/img/bul_arrow_up_white.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 33px;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background-position: 50% 50%;
+    z-index: 50;
+    display: block;
     
+}
+
+.container .content .head #widget.rolling-banner.full ul{
+
+    animation: none;
+    position: relative;
+    z-index: 40;
+   
+    min-height: 84px;
+    
+}
+
+/* filter */
+#search-filter{
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 1px 0 0 rgba(204,204,204,0.50);
+
+}
+.filter-area{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    
+}
+
+#search-filter > .filter-area > .filter.zone {
+    border-left-width: 1px;
+    width: 34%;
+}
+
+#search-filter > .filter-area > .filter > dt {
+    position: relative;
+    text-align: center;
+    line-height: 34px;
+    padding: 0 15px;
+    color: #1C79BC;
+}
+#search-filter > .filter-area > .filter > dt >span {
+    font-size: 14px;
+    color: #1C79BC;
+    letter-spacing: -0.5px;
+    line-height: 17px;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+}
+#search-filter > .filter-area{
+    display: flex;
+}
+#search-filter > .filter-area dl{
+    width: 33%;
+    border-bottom: 1px solid #a0a0ac;
+    border-right: 1px solid #a0a0ac;
+}
+#search-filter > .filter-area dl:last-child{
+    border-right: none;
+
+}
+/* search */
+.search{
+    width: 100%;
+    height: 41px;
+    padding: 6px 15px 7px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    background-color: #fff;
+    color:rgb(187, 187, 187);
+
+}
+
+.search input{
+    padding-left: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 388px;
+    height: 28px;
+    background-color:rgb(239, 242, 244);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.search input::placeholder{
+    color:rgb(187, 187, 187);
+    font-weight: 600;
+}
+.search button{
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    color:rgb(187, 187, 187);
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* main */
+.main{
+    background-color: rgb(225, 230, 234);
+    height: auto
+}
+
+.main .main-title{
+    padding-top: 20px;
+}
+
+.main .main-title h3{
+    font-size: 14px;
+    line-height: 1.4285714286;
+    display: inline-block;
+    width: 420px;
+    color: #1C79BC;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    padding: 0 20px 10px;
+}
+
+
+.main .card-wrap{
+    box-shadow:0 1px 0 0 rgba(204,204,204,0.50);
+    margin: 0 15px 10px 15px;
+}
+
+.main .card-wrap .card-top{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 12px 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    
+  
+}
+
+.main .card-wrap .card-top .top-left h2{
+    font-size: 14px;
+    line-height: 1.4285714286;
+    color: #444444;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+}
+
+.main .card-wrap .card-top .top-left h2>span{
+    font-size: 13px;
+    line-height: 1.04;
+    color: #444444;
+    letter-spacing: -0.5px;
+    margin-left: 5px;
+}
+.main .card-wrap .card-top .top-left p{
+    margin-top: 7px;
+    color: #777777;
+    font-size: 13px;
+    line-height: 1.04;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 300px;
+    display: block;
+    overflow: hidden;
+}
+
+.main .card-wrap .card-top .top-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main .card-wrap .card-top strong{
+    display: block;
+    text-align: right;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.04;
+    color: #F5A623;
+}
+.main .card-wrap .card-top span{
+    color: #1C79BC;
+    font-size: 13px;
+    line-height: 1.04;
+    font-weight: 500;
+}
+.main .card-wrap .card-bottom{
+    position: relative;
+    width: 388px;
+    height: 150px;
+    overflow: hidden;
+}
+.main .card-wrap .card-bottom .thumbnail{
+    position: relative;
+    min-width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  
+}
+.main .card-wrap .card-bottom .thumbnail img{
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    
+
+}
+.main .card-wrap .card-bottom .thumbnail::after{
+    content: '오늘시세';
+    width: 54px;
+    height: 23px;
+    background-color: #80DB35;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 12px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 3px;
+}
+.main .card-wrap .card-bottom .thumbnail::before{
+    content: '';
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url("https://www.tpirates.com/img/bul_favorite.svg");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+}
+
+.main .card-wrap .card-bottom .today-price{
+    width: 54px;
+    padding: 0 6px;
+    bottom: 15px;
+    left: 15px;
+    position: absolute;
 }

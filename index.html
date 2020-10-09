@@ -46,49 +46,95 @@
      </div>  
      <!-- //header -->
      <!-- container -->
-    <div class="container">
-        <div class="content">
-            <div class="head">
-                <div class="rolling-banner">
-                    <ul id="banner-items">
-                  
-                    </ul>
+        <div class="container">
+            <div class="content">
+                <div class="head">
+                    <div id="widget" class="rolling-banner rolling">
+                        <ul>
+                    
+                        </ul>
+                        <em id="btn-arrow" class="btn-arrow btn-down"></em>
+                    </div>
                 </div>
             </div>
+    <!-- filter -->
+    <div id="search-filter" class="search-filter">
+        <div class="filter-area">
+            <dl class="filter zone">
+                <dt>
+                    <span>모든지역 ▾</span>
+            </dt>
+            <dd>
+                <div class="fixed">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+            </dl>
+            <dl class="filter item">
+            <dt>
+                <span>모든품목 ▾</span>
+            </dt>
+            <dd>
+                <div class="fixed">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+            </dl>
+            <dl class="filter">
+            <dt>
+                <span>기본 순 ▾</span>
+            </dt>
+            <dd>
+                <div class="fixed">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+            </dl>
         </div>
     </div>
-     
-   </div>
+    <div class="search">
+        <input type="text" placeholder="검색어를 입력하세요" title="검색어를 입력하세요">
+        <button type="button">검색</button>
+    </div>
+    <!-- main -->
+    <div id="main-content" class="main">
+        <div class="main-title">
+            <h3>오늘의 추천 가게</h3>
+        </div>
+    </div>
+</div>
+    
+</div>
 
 
 
 
 
 <script src="./assets/js/script.js"></script>
-  <!-- <script type="text/javascript">
-  let bannerData = [
-  {
-    "label": "활모듬회(소)",
-    "price": "38,000원→30,000원",
-    "comment": "쿠폰 할인가",
-    "outLink": "",
-    "zoneLabel": "가락",
-    "permalink": "가락시장놀부수산",
-    "uri": "가락시장놀부수산"
-  },
-  {
-    "label": "활새우(대)",
-    "price": "25,000원/kg",
-    "comment": "전국최저가",
-    "outLink": "",
-    "zoneLabel": "인천",
-    "permalink": "인천종합연안부두어시장서림상회",
-    "uri": "인천종합연안부두어시장서림상회"
-  }
-]
-console.log(bannerData)
-   const content = document.getElementById("content");
-   content.innerHTML=`<a href="https://www.tpirates.com/${bannerData[0].permalink}">${bannerData[0].label} <span class="bannerPrice">${bannerData[0].price}</span> ${bannerData[0].comment}</a>` -->
 </script>
 </body>
 </html>
