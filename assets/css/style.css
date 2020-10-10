@@ -91,6 +91,8 @@ body{
 #header-nav ul li a{
     color: #fff;
     font-weight: 500;
+    font-size: 15px;
+    line-height: 0.93;
 
 }
 #header-nav ul li a.header-nav.active{
