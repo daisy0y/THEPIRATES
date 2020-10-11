@@ -46,5 +46,49 @@ $ npm install jquery
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    ```
    
+## 구동 가이드
+- https://daisy0y.github.io/THEPIRATES/ 에서 웹 페이지를 확인할 수 있습니다.  
+
+![main](https://user-images.githubusercontent.com/61371367/95678729-80cba200-0c09-11eb-9be4-8cdd5b14fa8c.jpg)
+
+
+페이지를 열었을때 확인 할 수 있는 메인 페이지입니다.
+
+![header](https://user-images.githubusercontent.com/61371367/95678853-28e16b00-0c0a-11eb-9537-6756727ac3fc.jpg)
+
+
+웹페이지의 header의 메뉴 영역입니다. 메인페이지를 구현하였기 때문에 해당 배너들을 클릭하여도 이동하지 않습니다.
    
-   
+![rollingbanner](https://user-images.githubusercontent.com/61371367/95678950-c472db80-0c0a-11eb-9143-eddd595ccfd0.jpg)
+
+header의 롤링배너 영역입니다. JSON에서 데이터를 가져와 배너에 추가되도록 하였고 배너를 드랍다운 했을때는 롤링하지 않습니다.
+롤링은 1초간격으로 진행됩니다. 링크 클릭시 실제 해당 상점 페이지로 이동합니다.
+
+![filter](https://user-images.githubusercontent.com/61371367/95679091-96da6200-0c0b-11eb-854a-41c3bdfb50e5.jpg)
+
+
+header의 filter메뉴 입니다. 모든메뉴와 생선/횟감 베뉴를 클릭시 전체보기가 활성화 됩니다. 
+
+![search](https://user-images.githubusercontent.com/61371367/95679175-fd5f8000-0c0b-11eb-9e1e-d9d605ec9ebf.jpg)
+
+
+header의 검색메뉴 입니다. 영역만 구성하여 실제 검색이 되지 않습니다.
+
+
+![scroll](https://user-images.githubusercontent.com/61371367/95679299-c76ecb80-0c0c-11eb-887e-ccb2c74db01d.jpg)
+
+
+메인페이지의 가게 영역입니다. 스크롤을 내리면 JSON 데이터를 조회해서 화면에 렌더링 합니다. 해당 아이템 클릭시 실제 가게페이지로 이동합니다.
+실제 사이트와 이미지 데이터가 달라 크롭되어 보여지게 했습니다.
+
+![detail](https://user-images.githubusercontent.com/61371367/95679365-3f3cf600-0c0d-11eb-8a62-ffeebc191900.jpg)
+
+
+메인페이지 왼쪽 상단에 있는 가게상세페이지구현 버튼을 누르면 이동하는 상세페이지 구현화면 입니다.
+가게영역의 데이터는 JSON에서 랜더링되어 따로 버튼을 구현했습니다.
+
+
+![detail2](https://user-images.githubusercontent.com/61371367/95679403-904cea00-0c0d-11eb-91ad-867e6fb29e8c.jpg)
+
+실제 데이터 없이 퍼블리싱한 페이지입니다. 가게 상세 정보 / 시세 정보  / 메뉴 정보 / 가게 컨텐츠 정보로 구성했으며 탐방기 / 댓글 / 위치중 탐방기만 구현했습니다.
+
