@@ -6,6 +6,7 @@
     line-height: 20px;
     font-weight: 400;
     text-decoration: none;
+    font-family: 'Noto Sans KR','맑은 고딕','Arial','Gulim';
 }
 
 body{
@@ -13,6 +14,7 @@ body{
     background-color: #333333;
     width: 100%;
     height: 100vh;
+    position: relative;
 
 }
 
@@ -25,11 +27,29 @@ body{
     max-width: 420px;
 
 }
+body .store-detail-link{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+body .store-detail-link a{
+    width: 20px;
+    height: 150px;
+    background-color: #1C79BC;
+    display: block;
+    box-sizing: content-box;
+    padding: 5px;
+    color: #fff;
+    border-radius: 4px;
+}
+.fixed{
+  
+}
 /* header */
 #header {
     position: relative;
     top: 0;
-    z-index: 30;
+    z-index: 2001;
     width: 100%;
     height: 90px;
     background: #fff;
@@ -99,74 +119,69 @@ body{
     color: yellow;
     
 }
+#header-nav.fixed{
+    position: fixed;
+    top: 0;
+    min-width: 320px;
+    width: 100%;
+    max-width: 420px;
+    z-index: 2001;
+}
 /* container */
-
-.container{
-    width: 100%;
-    height: auto;
-    position: relative;
+#container{
+    width: 420px;
 }
-
-.container .content .head .rolling-banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #313841;
+#container > div > div.content > .head{
     position: relative;
-    
-    width: 100%;
-    
-}
-.container .content .head .rolling-banner ul{
+    width: 420px;
     height: 42px;
-    overflow: hidden;
- 
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
 }
-.container .content .head .rolling-banner ul li{
+#widget{
+    width: 420px;
+    height: 42px;
+    background-color:rgb(49, 56, 65);
+}
+#widget > ul{
+    position: relative;
+    height: 42px;
+    z-index: 1;
+   
+}
+#widget > ul.full{
+    
+    z-index: 2001;
+    animation: none;
+}
+#widget > ul > li{
+    display: block;
+    width: 420px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    background-color:rgb(49, 56, 65);
+  
+   
+}
+#widget.fixed{
+        position: fixed;
+        top: 42px;
+        min-width: 320px;
+        width: 100%;
+        max-width: 420px;
+        z-index: 1000; 
+}
+#list-hide > li{
     font-size: 14px;
     font-weight: 500;
-    height: 42px;
-    position: relative;
-  
-    
-
 }
-
-.container .content .head #widget.rolling-banner.rolling ul li{
-    animation-name: banner;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 1000ms;
-    animation-direction: normal;
-    animation-delay: 500ms;
-    
-}
-
-@keyframes banner{
-    from{
-        bottom: 0;
-    }
-    to{
-        bottom: 42px;
-    }
-}
-
-
-.container .content .head .rolling-banner ul li a{
-    width: 377px;
+#list-hide > li a{
     color: #fff;
-    height: 42px;
-    line-height: 42px;
-    display: block;
-    position: relative;
+    width: 380px;
+    
 }
-.container .content .head .rolling-banner ul li a span{
-    color: #B8E986
+
+#list-hide > li > a > .price-color{
+    color:#B8E986;
 }
 .container .content .head .rolling-banner .btn-arrow.btn-down{
     width: 33px;
@@ -175,7 +190,7 @@ body{
     right: 0;
     top: 3px;
     background-position: 50% 50%;
-    z-index: 50;
+    z-index: 2001;
     display: block;
     background-image: url('https://www.tpirates.com/img/bul_arrow_down_white.svg');
     background-repeat: no-repeat;
@@ -191,82 +206,99 @@ body{
     right: 0;
     top: 3px;
     background-position: 50% 50%;
-    z-index: 50;
+    z-index: 2001;
     display: block;
-    
+}
+#list-hide{
+
+    animation-name: banner;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
+    animation-direction: normal;
+    animation-delay: 500ms;
 }
 
-.container .content .head #widget.rolling-banner.full ul{
-
-    animation: none;
-    position: relative;
-    z-index: 40;
-   
-    min-height: 84px;
-    
+@keyframes banner{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 42px;
+    }
 }
 
 /* filter */
 #search-filter{
     z-index: 10;
     position: relative;
-    box-shadow: 0 1px 0 0 rgba(204,204,204,0.50);
+    width: 420px;
+    height: 36px;
+    background-color: #fff;
+    box-sizing: border-box;
 
 }
-.filter-area{
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    position: relative;
-    
+#search-filter.fixed{
+    position: fixed;
+    top: 85px;
+    min-width: 320px;
+    width: 420px;
+    max-width: 420px;
+    z-index: 1000;
+    box-sizing: border-box;
 }
-
-#search-filter > .filter-area > .filter.zone {
-    border-left-width: 1px;
-    width: 34%;
-}
-
-#search-filter > .filter-area > .filter > dt {
-    position: relative;
+#search-filter .filter-area{
+    height: 34px;
+    width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     line-height: 34px;
-    padding: 0 15px;
-    color: #1C79BC;
+    
+
 }
-#search-filter > .filter-area > .filter > dt >span {
+#search-filter .filter-area > div{
+    
+    width: 33.33333333%;
+    background-color:#fff;
+    border-bottom: 1px solid rgb(204,204,204);
+
+}
+
+#search-filter > div > div:nth-child(2){
+    border-right: 1px solid rgb(204,204,204);
+    border-left: 1px solid rgb(204,204,204);;
+}
+#search-filter .filter-area > div > span{
     font-size: 14px;
-    color: #1C79BC;
-    letter-spacing: -0.5px;
-    line-height: 17px;
-    font-weight: normal;
-    text-decoration: none;
-    position: relative;
-}
-#search-filter > .filter-area{
-    display: flex;
-}
-#search-filter > .filter-area dl{
-    width: 33%;
-    border-bottom: 1px solid #a0a0ac;
-    border-right: 1px solid #a0a0ac;
-}
-#search-filter > .filter-area dl:last-child{
-    border-right: none;
+    
+    color:rgb(28, 121, 188);
 
 }
 /* search */
 .search{
+    box-sizing: border-box;
     width: 100%;
     height: 41px;
-    padding: 6px 15px 7px;
+    padding: 5px 15px 7px;
     display: flex;
     justify-content: space-around;
     position: relative;
     background-color: #fff;
     color:rgb(187, 187, 187);
-
+    border-bottom: 1px solid #cccccc;
+    z-index: 10;
+   
 }
-
+#container > div > div.search.fixed{
+    position: fixed;
+    top: 121px;
+    min-width: 320px;
+    width: 100%;
+    max-width: 420px;
+    z-index: 1000;
+}
 .search input{
     padding-left: 10px;
     border: none;
@@ -276,27 +308,28 @@ body{
     background-color:rgb(239, 242, 244);
     outline: none;
     font-size: 14px;
-    font-weight: 500;
+  
 }
 .search input::placeholder{
     color:rgb(187, 187, 187);
-    font-weight: 600;
+    
 }
 .search button{
     border: none;
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 10px;
     cursor: pointer;
     color:rgb(187, 187, 187);
     outline: none;
     font-size: 14px;
-    font-weight: 600;
+  
 }
 /* main */
 .main{
     background-color: rgb(225, 230, 234);
-    height: auto
+    height: auto;
+    z-index:5;
 }
 
 .main .main-title{
@@ -442,4 +475,122 @@ body{
     bottom: 15px;
     left: 15px;
     position: absolute;
+}
+/* 드랍다운 */
+#container > div > div.container{
+    width: 420px;
+    height: auto;
+    position: relative;
+}
+
+.location-body{
+    width: 420px;
+    height: 10000ox;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.location-body.active{
+    width: 420px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap;
+}
+#location-body > div{
+    
+    top: 0;
+    left: 0;
+ width: 33.3333333%;
+ height: 34px;
+ background-color: rgb(255, 255, 255);
+ line-height: 34px;
+
+ z-index: 9999;
+ 
+
+}
+#location-body > div>span{font-size:14px; color:rgb(119, 119, 119);}
+#location-body .index1,.index2,.index3{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index4,.index5,.index6{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index7,.index8,.index9{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index10,.index11,.index12{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index13,.index14,.index15{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index16,.index17,.index18{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index19,.index20,.index21{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index22,.index23,.index24{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index25,.index26,.index27{border-bottom:1px solid rgb(204, 204, 204);}
+#location-body .index2,.index5,.index8,.index11,.index14,.index17,.index20,.index23,.index26{
+    border-left: 1px solid rgb(204, 204, 204);
+    border-right: 1px solid rgb(204, 204, 204);
+}
+#location-body.fixed{
+    position: fixed;
+    top: 85px;
+    min-width: 320px;
+    width: 420px;
+    max-width: 420px;
+    z-index: 1900;
+    box-sizing: border-box;
+}
+
+/* dropdown product */
+.product-body{
+    width: 420px;
+   
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.product-body.active{
+    width: 420px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap;
+    
+}
+#product-body > div{
+
+    top: 0;
+    left: 0;
+ width: 33.3333333%;
+ height: 34px;
+ background-color: rgb(255, 255, 255);
+ line-height: 34px;
+ z-index: 1900;
+}
+#product-body.fixed{
+    position: fixed;
+    top: 130px;
+    min-width: 320px;
+    width: 420px;
+    max-width: 420px;
+    z-index: 1900;
+    box-sizing: border-box;
+}
+#product-body > div>span{font-size:14px; color:rgb(119, 119, 119);}
+#product-body .index1,.index2,.index3{border-bottom:1px solid rgb(204, 204, 204);}
+#product-body .index4,.index5,.index6{border-bottom:1px solid rgb(204, 204, 204);}
+#product-body .index7,.index8,.index9{border-bottom:1px solid rgb(204, 204, 204);}
+#product-body .index10,.index11,.index12{border-bottom:1px solid rgb(204, 204, 204);}
+#product-body .index13,.index14,.index15{border-bottom:1px solid rgb(204, 204, 204);}
+
+#product-body .index2,.index5,.index8,.index11,.index14,.index17,.index20,.index23,.index26{
+    border-left: 1px solid rgb(204, 204, 204);
+    border-right: 1px solid rgb(204, 204, 204);
 }
